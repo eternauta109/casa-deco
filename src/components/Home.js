@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <Container maxWidth="lg" sx={{ mt: 5 }}>
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 2, textAlign: "center" }}>
           <Typography sx={{ mt: 3 }}>
             I furnished and renovated the apartment to live in it, and it
             reflects my idea of beauty and livability.
