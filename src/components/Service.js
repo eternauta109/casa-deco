@@ -17,7 +17,7 @@ const Service = () => {
           gap: "10px", // Add gap property
         }}
       >
-        <CardService tema={"resturant"} />
+        <CardService tema={"restaurant"} />
         <CardService tema={"tour"} />
         <CardService tema={"history"} />
       </Box>
