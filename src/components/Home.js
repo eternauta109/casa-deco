@@ -18,6 +18,15 @@ const Home = () => {
     <>
       <Container maxWidth="lg" sx={{ mt: 5 }}>
         <Box sx={{ p: 2, textAlign: "center" }}>
+          <Image
+            src={"/logo.JPG"}
+            alt="logo"
+            layout="fixed"
+            width={200}
+            height={200}
+            loading="lazy"
+          />
+
           <Typography sx={{ mt: 3 }}>
             I furnished and renovated the apartment to live in it, and it
             reflects my idea of beauty and livability.

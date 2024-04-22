@@ -7,7 +7,7 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "casa deco",
+  title: "casa deco roma",
   description: "home rental rome casa deco",
 };
 
