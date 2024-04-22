@@ -3,21 +3,13 @@
 import { Box, Container, Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 import React from "react";
+import BackhomeButton from "@/components/BackhomeButton";
 
 const Tour = () => {
   const router = useRouter();
   return (
     <Container>
-      <Box>
-        <Button
-          variant="contained"
-          color="primary"
-          sx={{ mt: 4 }}
-          onClick={() => router.push("/")}
-        >
-          Back to Home
-        </Button>
-      </Box>
+      <BackhomeButton />
     </Container>
   );
 };

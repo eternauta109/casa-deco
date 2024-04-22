@@ -5,6 +5,7 @@ import { Typography, Button, Container, Box } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import BackhomeButton from "@/components/BackhomeButton";
 
 const History = () => {
   const router = useRouter();
@@ -108,14 +109,7 @@ const History = () => {
         wonder that this enchanting neighborhood continues to capture the hearts
         of visitors from around the world.
       </Typography>
-      <Button
-        variant="contained"
-        color="primary"
-        sx={{ mt: 4 }}
-        onClick={() => router.push("/")}
-      >
-        Back to Home
-      </Button>
+      <BackhomeButton />
     </Container>
   );
 };

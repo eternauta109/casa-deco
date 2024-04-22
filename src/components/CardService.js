@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
+import { Button } from "@mui/material";
 import Link from "next/link";
 import Typography from "@mui/material/Typography";
 
@@ -48,9 +48,21 @@ const CardService = ({ tema }) => {
           {description}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ display: "flex", justifyContent: "center" }}>
         <Link href={`/${tema}`}>
-          <Button size="small">More info</Button>
+          <Button
+            size="small"
+            variant="contained"
+            sx={{
+              backgroundColor: "#424242", // Grigio scuro
+              color: "white", // Testo bianco
+              "&:hover": {
+                backgroundColor: "#616161",
+              },
+            }}
+          >
+            More info
+          </Button>
         </Link>
       </CardActions>
     </Card>

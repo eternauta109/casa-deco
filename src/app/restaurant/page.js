@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 import {
   Container,
@@ -14,9 +13,9 @@ import {
   Button,
 } from "@mui/material";
 
-const Restaurant = () => {
-  const router = useRouter();
+import BackhomeButton from "@/components/BackhomeButton";
 
+const Restaurant = () => {
   const restaurants = [
     {
       id: "letrezucche",
@@ -87,14 +86,7 @@ const Restaurant = () => {
         ))}
         {/* Aggiungi altre card per altri ristoranti, se necessario */}
       </Box>
-      <Button
-        variant="contained"
-        color="primary"
-        sx={{ mt: 4 }}
-        onClick={() => router.push("/")}
-      >
-        Back to Home
-      </Button>
+      <BackhomeButton />
     </Container>
   );
 };
