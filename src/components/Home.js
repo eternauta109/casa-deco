@@ -6,6 +6,8 @@ import {
   ImageList,
   ImageListItem,
   ListSubheader,
+  Box,
+  Typography,
   ImageListItemBar,
   IconButton,
 } from "@mui/material";
@@ -15,6 +17,23 @@ const Home = () => {
   return (
     <>
       <Container maxWidth="lg" sx={{ mt: 5 }}>
+        <Box sx={{ p: 2 }}>
+          <Typography sx={{ mt: 3 }}>
+            I furnished and renovated the apartment to live in it, and it
+            reflects my idea of beauty and livability.
+          </Typography>
+
+          <Typography sx={{ mt: 3 }}>
+            You will find a series of paintings and a fresco created by my
+            father, which tell a lot about me. I hope my guests will also enjoy
+            the care I put into making them feel comfortable in a quiet and
+            easily accessible area, both by car and public transportation.
+          </Typography>
+          <Typography sx={{ mt: 3 }}>
+            The proximity to Trastevere station makes it easy to connect to
+            Fiumicino Airport.
+          </Typography>
+        </Box>
         <ImageList
           variant="quilted"
           cols={4}
