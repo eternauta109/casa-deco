@@ -20,14 +20,6 @@ const Service = () => {
         <CardService tema={"resturant"} />
         <CardService tema={"tour"} />
         <CardService tema={"history"} />
-        <CardService />
-        <CardService />
-        <CardService />
-        <CardService />
-        <CardService />
-        <CardService />
-        <CardService />
-        <CardService />
       </Box>
     </>
   );
