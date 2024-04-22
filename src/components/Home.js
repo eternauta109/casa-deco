@@ -7,6 +7,7 @@ import {
   ImageListItem,
   ListSubheader,
   Box,
+  Grid,
   Typography,
   ImageListItemBar,
   IconButton,
@@ -15,9 +16,30 @@ import InfoIcon from "@mui/icons-material/Info";
 
 const Home = () => {
   return (
-    <>
-      <Container maxWidth="lg" sx={{ mt: 5 }}>
-        <Box sx={{ p: 2, textAlign: "center" }}>
+    <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+      <Grid item xs={12} md={2}>
+        <Box
+          sx={{
+            p: 3,
+
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            justifyItems: "center",
+          }}
+        >
+          <Image
+            alt="aladestra"
+            src="/aladestra.jpeg"
+            width={208}
+            height={800}
+            style={{ transform: "scaleX(-1)" }}
+          />
+        </Box>
+      </Grid>
+      <Grid item justifyContent="center" xs={12} md={8}>
+        <Box sx={{ p: 2, textAlign: "center" }} xs={4}>
           <Image
             src={"/logo.JPG"}
             alt="logo"
@@ -47,7 +69,7 @@ const Home = () => {
           variant="quilted"
           cols={4}
           rowHeight={121}
-          sx={{ maxWidth: "100vw", height: 500, overflowY: "auto" }}
+          sx={{ height: 500, overflowY: "auto" }}
         >
           <ImageListItem key="Subheader" cols={4}>
             <ListSubheader component="div">Casa Decò</ListSubheader>
@@ -82,8 +104,28 @@ const Home = () => {
             </ImageListItem>
           ))}
         </ImageList>
-      </Container>
-    </>
+      </Grid>
+      <Grid item xs={12} md={2}>
+        <Box
+          sx={{
+            p: 3,
+
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            justifyItems: "center",
+          }}
+        >
+          <Image
+            alt="aladestra"
+            src="/aladestra.jpeg"
+            width={208}
+            height={800}
+          />
+        </Box>
+      </Grid>
+    </Grid>
   );
 };
 
