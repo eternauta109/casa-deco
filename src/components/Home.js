@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Slideshow from "./Slideshow";
 
 import {
   Container,
@@ -17,7 +18,7 @@ import InfoIcon from "@mui/icons-material/Info";
 const Home = () => {
   return (
     <Grid sx={{ flexGrow: 1 }} container spacing={2}>
-      <Grid item xs={12} md={2}>
+      {/* <Grid item xs={12} md={2}>
         <Box
           sx={{
             p: 3,
@@ -37,8 +38,8 @@ const Home = () => {
             style={{ transform: "scaleX(-1)" }}
           />
         </Box>
-      </Grid>
-      <Grid item justifyContent="center" xs={12} md={8}>
+      </Grid> */}
+      <Grid item justifyContent="center" xs={12} md={12}>
         <Box sx={{ p: 2, textAlign: "center" }} xs={4}>
           <Image
             src={"/logo.JPG"}
@@ -65,47 +66,11 @@ const Home = () => {
             Fiumicino Airport.
           </Typography>
         </Box>
-        <ImageList
-          variant="quilted"
-          cols={4}
-          rowHeight={121}
-          sx={{ height: 500, overflowY: "auto" }}
-        >
-          <ImageListItem key="Subheader" cols={4}>
-            <ListSubheader component="div">Casa Decò</ListSubheader>
-          </ImageListItem>
-          {itemData.map((item) => (
-            <ImageListItem
-              key={item.img}
-              cols={item.cols || 1}
-              rows={item.rows || 1}
-            >
-              <Image
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                alt={item.title}
-                layout="fill"
-                loading="lazy"
-                style={{ objectFit: "cover" }}
-              />
-
-              <ImageListItemBar
-                title={item.title}
-                subtitle={item.author}
-                actionIcon={
-                  <IconButton
-                    sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                    aria-label={`info about ${item.title}`}
-                  >
-                    {/* <InfoIcon /> */}
-                  </IconButton>
-                }
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+        <Box sx={{ p: 3 }}>
+          <Slideshow />
+        </Box>
       </Grid>
-      <Grid item xs={12} md={2}>
+      {/*  <Grid item xs={12} md={2}>
         <Box
           sx={{
             p: 3,
@@ -124,124 +89,9 @@ const Home = () => {
             height={800}
           />
         </Box>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
 
 export default Home;
-
-const itemData = [
-  {
-    img: "/casa/Pan_1.jpg",
-    title: "Panoramica",
-    rows: 3,
-    cols: 3,
-    featured: true,
-  },
-  {
-    img: "/casa/salotto1.jpg",
-
-    title: "Salotto",
-  },
-  {
-    img: "/casa/cucina.jpg",
-    title: "Camera",
-    rows: 3,
-    cols: 1,
-  },
-  {
-    img: "/casa/veduta.jpg",
-    title: "Veduta",
-
-    rows: 2,
-    cols: 1,
-  },
-  {
-    img: "/casa/letto3.jpg",
-    title: "Letto",
-
-    rows: 3,
-    cols: 2,
-  },
-  {
-    img: "/casa/salotto3.jpg",
-    title: "Salotto",
-    rows: 2,
-    cols: 1,
-    featured: true,
-  },
-
-  {
-    img: "/casa/bagno1.jpg",
-    title: "Bagno",
-
-    rows: 4,
-    cols: 3,
-    featured: true,
-  },
-  {
-    img: "/casa/salotto4.jpg",
-    title: "Salotto",
-
-    rows: 3,
-    cols: 1,
-    featured: true,
-  },
-  {
-    img: "/casa/cucina 3.jpg",
-    title: "Cucina",
-    rows: 3,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: "/casa/cucina 2.jpg",
-
-    title: "Cucina",
-  },
-  {
-    img: "/casa/dettaglio_frigo.jpg",
-    title: "detcucina",
-    rows: 3,
-    cols: 1,
-  },
-  {
-    img: "/casa/dettaglio_quadro.jpg",
-    title: "Quadro",
-
-    rows: 2,
-    cols: 1,
-  },
-  {
-    img: "/casa/letto3.jpg",
-    title: "Letto",
-
-    rows: 3,
-    cols: 2,
-  },
-  {
-    img: "/casa/salotto3.jpg",
-    title: "Salotto",
-    rows: 2,
-    cols: 1,
-    featured: true,
-  },
-
-  {
-    img: "/casa/bagno1.jpg",
-    title: "Bagno",
-
-    rows: 4,
-    cols: 3,
-    featured: true,
-  },
-  {
-    img: "/casa/salotto4.jpg",
-    title: "Salotto",
-
-    rows: 3,
-    cols: 1,
-    featured: true,
-  },
-];
